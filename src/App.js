@@ -3,7 +3,7 @@ import './App.css';
 import DisplayContact from './Components/DisplayContact';
 import allContacts from './contacts.json'
 
-const firstFive = allContacts.slice(0, 5)
+const firstFive = allContacts.slice(0, 6)
 
 function App() {
   const [contacts, setContact] = useState (firstFive)
@@ -21,7 +21,12 @@ function App() {
         {contacts
         .map(contact => 
           <div key={contact.id}>
-            <DisplayContact picture={contact.pictureUrl} name={contact.name} popularity={contact.popularity.toFixed(2)}/>
+            <DisplayContact 
+            picture={contact.pictureUrl} 
+            name={contact.name} 
+            popularity={contact.popularity.toFixed(2)} 
+            oscar={contact.wonOscar} 
+            emmy={contact.wonEmmy} />
           </div>
         )}
       </div>
