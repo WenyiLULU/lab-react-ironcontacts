@@ -14,11 +14,15 @@ function App() {
             <h3>Picture</h3>
             <h3>Name</h3>
             <h3>Popularity</h3>
+            <h3>Won Oscar</h3>
+            <h3>Won Emmy</h3>
       </div>
       <div className="contactTable">
         {contacts
         .map(contact => 
-        <DisplayContact picture={contact.pictureUrl} name={contact.name} popularity={contact.popularity}/>
+          <div key={contact.id}>
+            <DisplayContact picture={contact.pictureUrl} name={contact.name} popularity={contact.popularity.toFixed(2)}/>
+          </div>
         )}
       </div>
     </div>
