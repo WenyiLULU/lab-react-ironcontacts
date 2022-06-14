@@ -21,6 +21,7 @@ function App() {
             <h3>Popularity</h3>
             <h3>Won Oscar</h3>
             <h3>Won Emmy</h3>
+            <h3>Actions</h3>
       </div>
       <div className="contactTable">
         {contacts
@@ -31,7 +32,7 @@ function App() {
             name={contact.name} 
             popularity={contact.popularity.toFixed(2)} 
             oscar={contact.wonOscar} 
-            emmy={contact.wonEmmy} />
+            emmy={contact.wonEmmy} id={contact.id} contactArr={contacts} setter={setContact} />
           </div>
         )}
       </div>
