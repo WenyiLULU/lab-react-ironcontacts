@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+.contact{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.id_photo img{
+  width: 100px;
+}
